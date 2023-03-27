@@ -1,0 +1,1 @@
+export const STATE_CHANGE = "index/state_change";
