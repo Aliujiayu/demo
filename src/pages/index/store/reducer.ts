@@ -1,9 +1,12 @@
-import * as actionType from "./actionType";
 import { fromJS } from "immutable";
+import * as actionType from "./actionType";
 
 const defaultState = fromJS({
 	newDate: "",
-	datePickerShow: false
+	datePickerShow: false,
+	commentData: {
+		list: []
+	}
 });
 
 export default (state: any = defaultState, action: any) => {

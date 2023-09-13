@@ -1,0 +1,1 @@
+export const STATE_CHANGE = "aaa/state_change";

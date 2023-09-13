@@ -1,9 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@antmjs/vantui': ^2.5.6
   '@babel/core': ^7.8.0
   '@babel/runtime': ^7.7.7
-  '@nutui/nutui-react-taro': ^1.4.12
+  '@nutui/nutui-react-taro': ^1.4.10
   '@pmmmwh/react-refresh-webpack-plugin': ^0.5.5
   '@tarojs/cli': 3.6.2
   '@tarojs/components': 3.6.2
@@ -21,7 +22,6 @@ specifiers:
   '@tarojs/runtime': 3.6.2
   '@tarojs/shared': 3.6.2
   '@tarojs/taro': 3.6.2
-  '@tarojs/taro-h5': ^3.6.2
   '@tarojs/webpack5-runner': 3.6.2
   '@types/react': ^18.0.0
   '@types/webpack-env': ^1.13.6
@@ -49,6 +49,7 @@ specifiers:
   webpack: 5.69.0
 
 dependencies:
+  '@antmjs/vantui': 2.5.6_biqbaboplfbrettd7655fr4n2y
   '@babel/runtime': 7.21.0
   '@nutui/nutui-react-taro': 1.4.12_biqbaboplfbrettd7655fr4n2y
   '@tarojs/components': 3.6.2_@types+react@18.0.28
@@ -66,7 +67,6 @@ dependencies:
   '@tarojs/runtime': 3.6.2
   '@tarojs/shared': 3.6.2
   '@tarojs/taro': 3.6.2_@types+react@18.0.28
-  '@tarojs/taro-h5': 3.6.2_@types+react@18.0.28
   babel-plugin-import: 1.13.6
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -106,6 +106,22 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
+
+  /@antmjs/vantui/2.5.6_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-eKKDiCZHg3AAtHmGxwTqcBl0XJp8lp3Omo3HiLr0hSAxTAmJxmosJZvYH/0Y8AvZX2bzoi3H2Z8BYK4Xd4+M4Q==}
+    engines: {node: '>=12', npm: '>=6.4', yarn: '>=1.22'}
+    dependencies:
+      '@swc/helpers': 0.4.14
+      '@vant/icons': 1.8.0
+      classnames: 2.3.2
+      dayjs: 1.11.7
+      raf: 3.4.1
+      rc-util: 5.29.3_biqbaboplfbrettd7655fr4n2y
+      use-deep-compare-effect: 1.8.1_react@18.2.0
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
 
   /@babel/code-frame/7.0.0-beta.44:
     resolution: {integrity: sha512-cuAuTTIQ9RqcFRJ/Y8PvTh+paepNcaGxwQwjIDRWPXmzzyAeCO4KqS9ikMvq0MCbRk6GlYKwfzStrcP3/jSL8g==}
@@ -1880,6 +1896,12 @@ packages:
       '@swc/core-win32-ia32-msvc': 1.3.38
       '@swc/core-win32-x64-msvc': 1.3.38
 
+  /@swc/helpers/0.4.14:
+    resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
+    dependencies:
+      tslib: 2.5.0
+    dev: false
+
   /@swc/register/0.1.10_@swc+core@1.3.38:
     resolution: {integrity: sha512-6STwH/q4dc3pitXLVkV7sP0Hiy+zBsU2wOF1aXpXR95pnH3RYHKIsDC+gvesfyB7jxNT9OOZgcqOp9RPxVTx9A==}
     hasBin: true
@@ -2921,6 +2943,10 @@ packages:
     dependencies:
       '@use-gesture/core': 10.2.20
       react: 18.2.0
+    dev: false
+
+  /@vant/icons/1.8.0:
+    resolution: {integrity: sha512-sKfEUo2/CkQFuERxvkuF6mGQZDKu3IQdj5rV9Fm0weJXtchDSSQ+zt8qPCNUEhh9Y8shy5PzxbvAfOOkCwlCXg==}
     dev: false
 
   /@vue/compiler-core/3.2.47:
@@ -4979,6 +5005,10 @@ packages:
       whatwg-url: 8.7.0
     dev: true
 
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+    dev: false
+
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -5249,6 +5279,11 @@ packages:
   /deps-regex/0.1.4:
     resolution: {integrity: sha512-3tzwGYogSJi8HoG93R5x9NrdefZQOXgHgGih/7eivloOq6yC6O+yoFxZnkgP661twvfILONfoKRdF9GQOGx2RA==}
     dev: true
+
+  /dequal/2.0.3:
+    resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
+    engines: {node: '>=6'}
+    dev: false
 
   /destroy/1.2.0:
     resolution: {integrity: sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==}
@@ -9613,7 +9648,6 @@ packages:
 
   /performance-now/2.1.0:
     resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
-    dev: true
 
   /picocolors/0.2.1:
     resolution: {integrity: sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA==}
@@ -10315,6 +10349,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /raf/3.4.1:
+    resolution: {integrity: sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==}
+    dependencies:
+      performance-now: 2.1.0
+    dev: false
+
   /randombytes/2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
@@ -10345,6 +10385,18 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /rc-util/5.29.3_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-wX6ZwQTzY2v7phJBquN4mSEIFR0E0qumlENx0zjENtDvoVSq2s7cR95UidKRO1hOHfDsecsfM9D1gO4Kebs7fA==}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': 7.21.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-is: 16.13.1
+    dev: false
 
   /rc/1.2.8:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
@@ -12053,7 +12105,6 @@ packages:
 
   /tslib/2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
-    dev: true
 
   /tsutils/3.21.0_typescript@4.9.5:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -12321,6 +12372,17 @@ packages:
     resolution: {integrity: sha512-0kQLIzG4fdk/G5NONku64rSH/x32NOA39LVQqlK8Le6lvTF6GGRJpqaQFGgU+CLwySIqBSMdwYM0sYcW9f6P4A==}
     engines: {node: '>= 4'}
     dev: true
+
+  /use-deep-compare-effect/1.8.1_react@18.2.0:
+    resolution: {integrity: sha512-kbeNVZ9Zkc0RFGpfMN3MNfaKNvcLNyxOAAd9O4CBZ+kCBXXscn9s/4I+8ytUER4RDpEYs5+O6Rs4PqiZ+rHr5Q==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      react: '>=16.13'
+    dependencies:
+      '@babel/runtime': 7.21.0
+      dequal: 2.0.3
+      react: 18.2.0
+    dev: false
 
   /use-sync-external-store/1.2.0_react@18.2.0:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}

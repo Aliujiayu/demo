@@ -1,0 +1,80 @@
+.clearboth {
+  clear: both;
+}
+
+.jj-expandable-text {
+  display: flex;
+}
+
+.jj-expandable-text .text {
+  width: 100%;
+  position: relative;
+  line-height: 1.5;
+  max-height: 1.5em;
+  overflow: hidden;
+  transition: .3s max-height;
+}
+
+.jj-expandable-text .text::before {
+  content: '';
+  float: right;
+  width: 0;
+  /*设置为0，或者不设置宽度*/
+  height: calc(100% - var(--lineheight));
+  /*先随便设置一个高度*/
+  background: red;
+}
+
+.jj-expandable-text .text::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+}
+
+.jj-expandable-text .expandable {
+  max-height: 1000px;
+  /*超出最大行高度就可以了*/
+}
+
+.jj-expandable-text .expandable::after {
+  visibility: hidden;
+}
+
+.jj-expandable-text .btn {
+  float: right;
+  position: relative;
+  margin-left: 1em;
+}
+
+.jj-expandable-text .btn .opt-hint {
+  color: #00a8fb;
+}
+
+.jj-expandable-text .btn::before {
+  content: '...';
+  position: absolute;
+  letter-spacing: 2rpx;
+  left: -6rpx;
+  bottom: -2rpx;
+  color: inherit;
+  transform: translateX(-100%);
+}
+
+.jj-expandable-text .btn::after {
+  content: '.';
+  opacity: 0;
+  width: 0;
+}
+
+.jj-expandable-text .expandable .btn::after {
+  content: '.';
+  opacity: 0;
+  width: 0;
+}
+
+.jj-expandable-text .expandable .btn::before {
+  visibility: hidden;
+  /*在展开状态下隐藏省略号*/
+}
